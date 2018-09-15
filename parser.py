@@ -27,3 +27,20 @@ def parse_as_single_line_code(s):
     else:
         return None
 
+def unittests_parse_as_single_line_code():
+    tests = [
+        ["# Section 1", None],
+        ["#### fourth level title", None],
+        ["################################### nothing", None],
+        ["hey( ) #### description 1", {'code': 'hey( )', 'desc': 'description 1'}],
+        ["#hey()  ####     description 2    ", {'code': '#hey()', 'desc': 'description 2'}],
+        ["l   ####     description 3", {'code': 'l', 'desc': 'description 3'}],
+        ]
+    for test in tests:
+        assert parse_as_single_line_code(test[0]) == test[1], "Failed for the following case:\n{}".format(test[0])
+
+
+def run_unittests():
+    unittests_parse_as_single_line_code()
+
+# run_unittests()
