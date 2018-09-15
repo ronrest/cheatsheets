@@ -7,6 +7,9 @@ file = "tests.chs"
 with open(file) as fileObj:
     doc = fileObj.read()
 
+# TODO: check that `parse_as_single_line_code()` is using my most up to date
+# syntax definitions
+
 def parse_as_single_line_code(s):
     """ Given a single line of text it tries to parse as a single line
         code-description block eg:

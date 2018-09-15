@@ -1,24 +1,43 @@
 # Cheatsheets Syntax
 
-## Single line code
+## Sections
+
 
 ```py
-`print("hello")` #### Explanation of code
+################################################################################
+#                                                                   SECTION ONE
+################################################################################
 ```
 
 ```py
+# SECTION ONE
+```
+
+```py
+//// ###########################################################################
+                                                            **Legacy Section**
+//// ###########################################################################
+
+```
+
+## Single line code
+
+```py
+print("hello") #### Explanation of code
+```
+
+```
 #### This is a multiline explanation for a single line code example
 #### which is parsed as markdown, so you can use markdown formatting
 #### such as **bold** and *italic*
 ####
 #### It is also HTML safe, so you can do <b>bold</b>
-`print("hello")`
+print("hello") ####
 ```
 
 # Multi line code
 
 ````py
-```py
 #### This is a comment for a multiline code example
 #### and the comment can be split into lines in the source code.
 ####
@@ -33,7 +52,9 @@
 #### | 2 | 3 |
 ####
 #### It is also HTML safe, so you can do <b>bold</b>
+```py
 def hello(a):
     print(a)
-    ```
+```
+####
 ````
